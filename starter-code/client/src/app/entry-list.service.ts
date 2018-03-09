@@ -15,4 +15,9 @@ export class EntryListService {
       .map((res) => res.json());
   }
 
+  getDetails(id) {
+    return this.http.get(`${this.BASE_URL}/api/journal-entries/${id}`)
+      .map((res) => res.json());
+  }
+
 }
